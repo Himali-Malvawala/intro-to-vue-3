@@ -6,7 +6,6 @@ const app = Vue.createApp({
       brand: "Vue Mastery",
       selectedVariant: 0,
       details: ["50% cotton", "30% wool", "20% polyester"],
-      onSale: true,
       variants: [
         {
           id: 2234,
@@ -40,12 +39,6 @@ const app = Vue.createApp({
     },
     inStock() {
       return this.variants[this.selectedVariant].quantity;
-    },
-    sale() {
-      if (this.onSale) {
-        return this.brand + " " + this.product + " is on sale";
-      }
-      return "";
     },
   },
 });
